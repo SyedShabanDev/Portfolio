@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Syed Shaban Ahmad - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in { animation: fadeInUp 1s ease-out forwards; opacity: 0; }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="text-2xl font-bold gradient-text">Syed Shaban</div>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="nav-link text-blue-400 font-medium" data-section="home">Home</a>
+          <a href="#about" class="nav-link text-gray-300 hover:text-blue-400 transition" data-section="about">About</a>
+          <a href="#skills" class="nav-link text-gray-300 hover:text-blue-400 transition" data-section="skills">Skills</a>
+          <a href="#projects" class="nav-link text-gray-300 hover:text-blue-400 transition" data-section="projects">Projects</a>
+          <a href="#contact" class="nav-link text-gray-300 hover:text-blue-400 transition" data-section="contact">Contact</a>
+        </div>
+        
+        <button id="mobile-btn" class="md:hidden text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+      <div class="px-4 py-4 space-y-2">
+        <a href="#home" class="block px-4 py-2 rounded hover:bg-gray-700">Home</a>
+        <a href="#about" class="block px-4 py-2 rounded hover:bg-gray-700">About</a>
+        <a href="#skills" class="block px-4 py-2 rounded hover:bg-gray-700">Skills</a>
+        <a href="#projects" class="block px-4 py-2 rounded hover:bg-gray-700">Projects</a>
+        <a href="#contact" class="block px-4 py-2 rounded hover:bg-gray-700">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
+    <div class="absolute inset-0">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl animate-pulse"></div>
+    </div>
+    
+    <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+        Hi, I'm <span class="gradient-text">Syed Shaban Ahmad</span>
+      </h1>
+      <p class="text-2xl md:text-4xl text-gray-300 mb-6 animate-fade-in delay-100 font-light">
+        Front-end Developer
+      </p>
+      <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 animate-fade-in delay-200">
+        Motivated and eager to learn new skills · Building modern, responsive & performant web applications
+      </p>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center animate-fade-in delay-300">
+        <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-bold text-lg hover:shadow-2xl hover:shadow-purple-600/40 hover:scale-105 transition">
+          View My Projects
+        </a>
+        <a href="#contact" class="px-8 py-4 border-2 border-purple-500 rounded-full font-bold text-lg hover:bg-purple-500/10 hover:scale-105 transition">
+          Hire Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section - 100% CV کے مطابق -->
+  <section id="about" class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-6xl font-bold text-center mb-16 gradient-text">About Me</h2>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <!-- Profile Photo -->
+        <div class="flex justify-center">
+          <div class="bg-gradient-to-br from-blue-600 to-purple-600 p-2 rounded-3xl shadow-2xl">
+            <div class="bg-gray-900 rounded-3xl p-6 text-center">
+              <img src="./IMG_E4588.JPG" 
+                   alt="Syed Shaban Ahmad" 
+                   class="w-80 h-80 mx-auto rounded-full object-cover border-8 border-purple-600">
+              <h3 class="text-3xl font-bold mt-6">Syed Shaban Ahmad</h3>
+              <p class="text-xl text-gray-400">Front-end Developer</p>
+              <p class="text-gray-500">Lahore, Pakistan</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Text - بالکل CV سے کاپی کیا گیا -->
+        <div class="space-y-8 text-gray-300">
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-white">About me</h3>
+            <p class="text-lg leading-relaxed">
+              <strong>Motivated and eager to learn new skills.</strong>
+            </p>
+          </div>
+
+          <div class="space-y-5">
+            <div>
+              <h4 class="text-xl font-semibold text-white mb-2">Work Experience</h4>
+              <p class="font-medium">Web Developer — Self Employed</p>
+              <p class="text-sm text-gray-400">17/06/2025 – Present · Lahore, Pakistan</p>
+              <ul class="mt-3 space-y-2 text-gray-300">
+                <li class="flex items-center gap-3"><span class="w-2 h-2 bg-blue-400 rounded-full"></span> Frontend Design Implementation</li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 bg-purple-400 rounded-full"></span> API Integration</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-xl font-semibold text-white mb-2">Education</h4>
+              <div class="space-y-4">
+                <div>
+                  <p class="font-medium">BS Information Technology</p>
+                  <p>Riphah International College, Lahore</p>
+                  <p class="text-sm text-gray-400">21/09/2023 – 02/11/2025 · Final grade: 4.00</p>
+                </div>
+                <div>
+                  <p class="font-medium">ICS (Computer Science)</p>
+                  <p>Riphah International College, Lahore</p>
+                  <p class="text-sm text-gray-400">07/02/2020 – 09/08/2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-gray-800/60 backdrop-blur p-6 rounded-xl text-center">
+              <div class="text-4xl font-bold gradient-text">1+</div>
+              <p class="text-gray-400 mt-2">Year Experience</p>
+            </div>
+            <div class="bg-gray-800/60 backdrop-blur p-6 rounded-xl text-center">
+              <div class="text-4xl font-bold gradient-text">MERN</div>
+              <p class="text-gray-400 mt-2">Front-end Projects</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-4 bg-gray-800/50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Skills & Expertise</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-gray-800 rounded-xl p-6 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20 transition">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-code fa-2x text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Frontend</h3>
+          <div class="space-y-2 text-gray-400">
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>React</div>
+            <!-- <div class="flex items-center gap-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Next.js</div> -->
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Tailwind</div>
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>JavaScript</div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl p-6 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 transition">
+          <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-server fa-2x text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Backend</h3>
+          <div class="space-y-2 text-gray-400">
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-purple-500 rounded-full"></span>Node.js (Intermediate)</div>
+            <!-- <div class="flex items-center gap-3"><span class="w-2 h-2 bg-purple-500 rounded-full"></span>Express</div> -->
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-purple-500 rounded-full"></span>Django (Beginner)</div>
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-purple-500 rounded-full"></span>API Integration</div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl p-6 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20 transition">
+          <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-palette fa-2x text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">UI/UX Design</h3>
+          <div class="space-y-2 text-gray-400">
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-green-500 rounded-full"></span>Figma</div>
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-green-500 rounded-full"></span>Adobe XD</div>
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-green-500 rounded-full"></span>Wireframing</div>
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-green-500 rounded-full"></span>Prototyping</div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl p-6 hover:scale-105 hover:shadow-xl hover:shadow-orange-500/20 transition">
+          <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
+            <i class="fas fa-mobile-alt fa-2x text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Mobile</h3>
+          <div class="space-y-2 text-gray-400">
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-500 rounded-full"></span>React Native</div>
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-500 rounded-full"></span>Flutter</div>
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-500 rounded-full"></span>iOS</div>
+            <div class="flex items-center gap-3"><span class="w-2 h-2 bg-orange-500 rounded-full"></span>Android</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Featured Projects</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30 transition">
+          <div class="h-48 bg-gradient-to-br from-blue-600 to-purple-600">
+<img src="./screencapture-venturamart-netlify-app-2025-12-03-20_56_25.png" alt="E-Commerce Screenshot" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3">E-Commerce Platform</h3>
+            <p class="text-gray-400 mb-4">A modern e-commerce demo store built with React + Tailwind CSS. The site showcases product cards, clean layout, responsive design (mobile & desktop), and simple navigation.</p>
+            <div class="flex gap-2 flex-wrap mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Tailwind</span>
+                            <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Django</span>
+
+            </div>
+            <a href="https://venturamart.netlify.app" class="text-blue-400 hover:text-blue-300 font-medium">View Project →</a>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30 transition">
+          <div class="h-48 bg-gradient-to-br from-blue-600 to-purple-600">
+<img src="./screencapture-venturamart-netlify-app-2025-12-03-20_56_25.png" alt="E-Commerce Screenshot" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3">Blogging Website</h3>
+            <p class="text-gray-400 mb-4">A full-stack blogging website built using the MERN stack, featuring news and article publishing
+ with an intuitive admin panel and responsive user interface. </p>
+            <div class="flex gap-2 flex-wrap mb-4">
+              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Tailwind</span>
+                            <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">API Integration</span>
+                            <span class="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-sm">Django</span>
+
+            </div>
+            <a href="https://thetimesofnewyork.com/" class="text-purple-400 hover:text-purple-300 font-medium">View Project →</a>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30 transition">
+          <div class="h-48 bg-gradient-to-br from-green-600 to-teal-600"></div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3">Task Management</h3>
+            <p class="text-gray-400 mb-4">Collaborative project management tool</p>
+            <div class="flex gap-2 flex-wrap mb-4">
+              <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Vue.js</span>
+              <span class="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-sm">Firebase</span>
+            </div>
+            <a href="#" class="text-green-400 hover:text-green-300 font-medium">View Project →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+ <section id="contact" class="py-20 px-4 bg-gray-800/50">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Get In Touch</h2>
+    <p class="text-gray-400 text-lg mb-12">Have a project in mind? Let's work together!</p>
+    
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
+        <i class="fas fa-envelope fa-2x text-blue-500 mb-4"></i>
+        <h3 class="font-bold mb-2">Email</h3>
+        <p class="text-gray-400">syedshaban785@gmail.com</p>
+      </div>
+      
+      <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
+        <i class="fas fa-phone fa-2x text-purple-500 mb-4"></i>
+        <h3 class="font-bold mb-2">Phone</h3>
+        <p class="text-gray-400">+92 3079415512</p>
+      </div>
+      
+      <div class="bg-gray-800 p-6 rounded-xl hover:scale-105 transition">
+        <i class="fas fa-map-marker-alt fa-2x text-pink-500 mb-4"></i>
+        <h3 class="font-bold mb-2">Location</h3>
+        <p class="text-gray-400">Shadbagh Lahore, Pakistan</p>
+      </div>
+    </div>
+    
+    <!-- Formspree Integrated Form -->
+    <form action="https://formspree.io/f/xkgvejyr" method="POST" class="bg-gray-800 p-8 rounded-xl max-w-2xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <input type="text" name="name" placeholder="Your Name" required 
+               class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        <input type="email" name="email" placeholder="Your Email" required 
+               class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+      </div>
+      <input type="text" name="subject" placeholder="Subject" 
+             class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+      <textarea name="message" placeholder="Your Message" rows="5" required 
+                class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+      <button type="submit" class="w-full px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105 transition">
+        Send Message
+      </button>
+    </form>
+    
+    <!-- Optional: Success message (hidden by default) -->
+    <p id="success-message" class="hidden mt-4 text-green-400 text-lg">Thank you! Your message has been sent. I'll get back to you soon.</p>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-gray-800">
+    <div class="max-w-6xl mx-auto text-center px-4">
+      <p class="text-gray-400 mb-4">© 2025 Your Name. All rights reserved.</p>
+      <div class="flex gap-6 justify-center">
+        <a href="#" class="text-gray-400 hover:text-white hover:scale-125 transition"><i class="fab fa-github fa-lg"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white hover:scale-125 transition"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white hover:scale-125 transition"><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white hover:scale-125 transition"><i class="fas fa-envelope fa-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    const form = document.querySelector('form[action*="formspree"]');
+form.addEventListener('submit', function() {
+  setTimeout(() => {
+    document.getElementById('success-message').classList.remove('hidden');
+    form.reset();
+  }, 1000);
+});
+
+    const mobileBtn = document.getElementById('mobile-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.innerHTML = mobileMenu.classList.contains('hidden') 
+        ? '<i class="fas fa-bars"></i>' 
+        : '<i class="fas fa-times"></i>';
+    });
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+      let current = 'home';
+      ['home', 'about', 'skills', 'projects', 'contact'].forEach(section => {
+        const el = document.getElementById(section);
+        if (el && el.getBoundingClientRect().top <= 100 && el.getBoundingClientRect().bottom >= 100) {
+          current = section;
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('text-blue-500');
+        link.classList.add('text-gray-300');
+        if (link.dataset.section === current) {
+          link.classList.add('text-blue-500');
+          link.classList.remove('text-gray-300');
+        }
+      });
+    });
+  </script>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu
+    document.getElementById('mobile-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+      document.getElementById('mobile-btn').innerHTML = 
+        document.getElementById('mobile-menu').classList.contains('hidden') 
+          ? '<i class="fas fa-bars"></i>' 
+          : '<i class="fas fa-times"></i>';
+    });
+
+    // Active nav link
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      sections.forEach(section => {
+        const el = document.getElementById(section);
+        if (el && el.getBoundingClientRect().top < 150) {
+          current = section;
+        }
+      });
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.toggle('text-blue-400', link.dataset.section === current);
+        link.classList.toggle('text-gray-300', link.dataset.section !== current);
+      });
+    });
+  </script>
+</body>
+</html>
